@@ -1,0 +1,93 @@
+body{
+	margin: 0;
+	overflow: hidden;
+}
+#container{
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+header{
+	position: absolute;
+	top: 0;
+	background-color: red;
+	height: 10%;
+	width: 100%;
+	border: 1px black solid;
+}
+section{
+	padding: 10px;
+	position: absolute;
+	top:10%;
+	background-color: green;
+	float: left;
+	height: 80%;
+	width: 10%;
+	border: 1px black solid;
+
+}
+article{
+	position: absolute;
+	top:10%;
+	left:10%;
+	width: 100%;
+	overflow: auto;
+	background-color: yellow;
+	height: 100%;
+	border: 1px black solid;
+
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	height: 10%;
+	width:100%;
+	background-color: orange;
+	border: 1px black solid;
+}
+#addBtn{
+	box-shadow: 3px 3px 10px black;
+}
+
+.noteTitle{
+	float: left;
+	margin: 3px;
+	font-size: 20px;
+}
+.editBtn{
+	float: right;
+	margin: 3px;
+	padding: 0;
+	box-shadow: 3px 3px 10px black;
+}
+.xBtn{
+	float: right;
+	margin: 3px;
+	padding: 0;
+	box-shadow: 3px 3px 10px black;
+
+
+}
+.noteContent{
+	text-align: left;
+	margin: 25px 0 0 0;
+}
+.written{
+	margin: 7px;
+	color: red;
+}
+button:hover{
+	background-color: grey;
+}
+
+.addNote{
+	float: left;
+	margin: 14px;
+	width: 400px;
+	height: 200px;
+	border: 1px black solid;
+	background-color: green;
+	overflow: auto;
+	box-shadow: 12px 12px 10px black;	
+}
