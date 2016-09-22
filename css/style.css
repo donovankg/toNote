@@ -70,8 +70,9 @@ footer{
 
 }
 .noteContent{
+	margin: 0px 3px 3px 3px;
+	float: left;
 	text-align: left;
-	margin: 25px 0 0 0;
 }
 .written{
 	margin: 7px;
@@ -82,6 +83,7 @@ button:hover{
 }
 
 .addNote{
+	align-content: left;
 	float: left;
 	margin: 14px;
 	width: 400px;
