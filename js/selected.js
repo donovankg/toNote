@@ -8,8 +8,11 @@ define(function () {
 	var currentNote;
 	var title ="";
 	var content="";
-
+	var inUse= false;
 	function selectThis(event){
+		if(inUse==true){
+			return;
+		}
 		if(event.target.className=="addNote new" || event.target.className=="addNote"){
 			currentNote = event.target;
 			title = currentNote.childNodes[0].innerHTML;
@@ -24,7 +27,7 @@ define(function () {
 			contentInput.value = content;
 			contentInput.className = "contentInput";
 			var title = event.target.childNodes[0].innerHTML;
-			
+			inUse = true;
 	}
 }
 //		}else if(event.target.className=="addNote selected"){
@@ -39,7 +42,7 @@ define(function () {
 			currentNote.childNodes[2].innerHTML = contentInput.value;
 			event.target.remove();
 			currentNote.className="addNote";
-
+			inUse = false;
 
 
 	}
