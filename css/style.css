@@ -3,6 +3,7 @@ body{
 	overflow: hidden;
 }
 textarea.contentInput{
+
 	overflow-wrap: ;
 	float: left;
 	width: 380px;
@@ -75,6 +76,7 @@ article{
 	float: left;
 	text-align: left;
 	pointer-events: none;
+	width: 380px;
 }
 
 .written{

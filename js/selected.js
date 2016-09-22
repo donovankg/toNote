@@ -38,6 +38,8 @@ define(function () {
 			currentNote.childNodes[0].innerHTML = titleInput.value;
 			currentNote.childNodes[2].innerHTML = contentInput.value;
 			event.target.remove();
+			currentNote.className="addNote";
+
 
 
 	}
