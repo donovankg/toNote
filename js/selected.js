@@ -23,11 +23,22 @@ define(function () {
 			article.appendChild(editBox);
 			editBox.className="edit";
 			editBox.appendChild(titleInput);
-			titleInput.value = title;
-			titleInput.className="titleInput"
+			titleInput.className="titleInput";
 			editBox.appendChild(contentInput);
-			contentInput.value = content;
+			titleInput.placeholder="note title";
+			contentInput.placeholder="note content"
+			if(title=="click me to edit title"){
+				titleInput.value="";			
+			}else{
+				titleInput.value = title;
+			}
+			if(content=="click me to edit title"){
+				contentInput.value="";
+			}else{
+				contentInput.value = content;
+			}
 			contentInput.className = "contentInput";
+
 			var title = event.target.childNodes[0].innerHTML;
 			inUse = true;
 		}
