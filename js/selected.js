@@ -3,6 +3,7 @@ define(function () {
 	var editBox = document.createElement('div');
 	var titleInput = document.createElement('input');
 	var contentInput = document.createElement('textarea');
+	var editDate = document.createElement('p');
 	article.addEventListener('click',selectThis, false);
 	article.addEventListener('click',saveNote, false);
 	var currentNote;
@@ -36,12 +37,16 @@ define(function () {
 	function saveNote(event){
 		if(event.target.className=="edit"){
 			console.log(title);
+			var newEditDate = new Date();
 			// newTitle.innerHTML = title;
 			// newTxt.innerHTML= content;
 			currentNote.childNodes[0].innerHTML = titleInput.value;
 			currentNote.childNodes[2].innerHTML = contentInput.value;
 			event.target.remove();
 			currentNote.className="addNote";
+			currentNote.appendChild(editDate);
+			editDate.className = "editDate";
+			editDate.innerHTML= "last editted: "+newEditDate.toString();
 			inUse = false;
 
 
