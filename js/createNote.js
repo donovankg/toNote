@@ -28,7 +28,7 @@ define(function () {
 		newDate.innerHTML= "created on: "+getDate.toString();
 		newDiv.appendChild(editDate);
 		editDate.className = "editDate";
-		editDate.innerHTML = "test"
+		editDate.innerHTML = ""
 	}
 	return addNewNote;
 });

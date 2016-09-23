@@ -1,6 +1,6 @@
 body{
+	border: 0;
 	margin: 0;
-	overflow: hidden;
 }
 textarea.contentInput{
 	border-radius: 3px;
@@ -19,39 +19,21 @@ textarea.contentInput{
 	border: 1px black solid;
 	width: 200px;
 }
-#container{
-	overflow: hidden;
-	height: 100vh;
-	width: 100vw;
-}
+
 header{
 	position: absolute;
 	top: 0;
 	background-color: red;
 	height: 10%;
 	width: 100%;
-	border: 1px black solid;
-}
-section{
-	padding: 10px;
-	position: absolute;
-	top:10%;
-	background-color: green;
-	float: left;
-	height: 100%;
-	width: 10%;
-	border: 1px black solid;
-
 }
 article{
 	position: absolute;
 	top:10%;
-	width: 100%;
 	overflow: auto;
 	background-color: yellow;
-	height: 100%;
-	border: 1px black solid;
-
+	height: 90%;
+	width: 100%;
 }
 
 #addBtn{
@@ -136,7 +118,7 @@ button:hover{
 }
 .edit{
 	padding: 5px;
-	position: absolute;
+	position: fixed;
 	top: 30%;
 	left: 30%;
 	width: 600px;

@@ -14,6 +14,7 @@ define(function () {
 		if(inUse==true){
 			return;
 		}
+		console.log(event.target);
 		if(event.target.className=="addNote new" || event.target.className=="addNote"){
 			currentNote = event.target;
 			title = currentNote.childNodes[0].innerHTML;
