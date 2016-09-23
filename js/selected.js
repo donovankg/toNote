@@ -35,6 +35,10 @@ define(function () {
 			//if(!event.target.className=="noteTitle"||!event.target.className=="noteContent"){
 //				event.target.className="addNote";
 	function saveNote(event){
+		//tests for injection
+		var testTitle = titleInput.value;
+		console.log(testTitle.value);
+
 		if(event.target.className=="edit"){
 			console.log(title);
 			var newEditDate = new Date();
@@ -42,11 +46,9 @@ define(function () {
 			// newTxt.innerHTML= content;
 			currentNote.childNodes[0].innerHTML = titleInput.value;
 			currentNote.childNodes[2].innerHTML = contentInput.value;
+			currentNote.childNodes[4].innerHTML = "last editDate: "+ newEditDate.toString();
 			event.target.remove();
 			currentNote.className="addNote";
-			currentNote.appendChild(editDate);
-			editDate.className = "editDate";
-			editDate.innerHTML= "last edited: "+newEditDate.toString();
 			inUse = false;
 		}
 	}

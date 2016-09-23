@@ -11,6 +11,7 @@ define(function () {
 		var newTxt = document.createElement('p');
 		var newTitle = document.createElement('p');
 		var newDate = document.createElement('p');
+		var editDate = document.createElement('p');
 		article.appendChild(newDiv);
 		newDiv.appendChild(newTitle);
 		newDiv.appendChild(newX);
@@ -25,6 +26,9 @@ define(function () {
 		newTitle.innerHTML = "click me to edit title";
 		newTxt.innerHTML= "click me to edit title";
 		newDate.innerHTML= "created on: "+getDate.toString();
+		newDiv.appendChild(editDate);
+		editDate.className = "editDate";
+		editDate.innerHTML = "test"
 	}
 	return addNewNote;
 });
