@@ -29,8 +29,8 @@ define(function () {
 			contentInput.className = "contentInput";
 			var title = event.target.childNodes[0].innerHTML;
 			inUse = true;
+		}
 	}
-}
 //		}else if(event.target.className=="addNote selected"){
 			//if(!event.target.className=="noteTitle"||!event.target.className=="noteContent"){
 //				event.target.className="addNote";
@@ -46,11 +46,8 @@ define(function () {
 			currentNote.className="addNote";
 			currentNote.appendChild(editDate);
 			editDate.className = "editDate";
-			editDate.innerHTML= "last editted: "+newEditDate.toString();
+			editDate.innerHTML= "last edited: "+newEditDate.toString();
 			inUse = false;
-
-
-	}
 		}
-	
+	}
 });

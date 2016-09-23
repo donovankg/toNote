@@ -22,8 +22,8 @@ define(function () {
 		newTitle.className = "noteTitle";
 		newTxt.className = "noteContent";
 		newX.innerHTML = "X";
-		newTitle.innerHTML = "";
-		newTxt.innerHTML= "";
+		newTitle.innerHTML = "click me to edit title";
+		newTxt.innerHTML= "click me to edit title";
 		newDate.innerHTML= "created on: "+getDate.toString();
 	}
 	return addNewNote;
