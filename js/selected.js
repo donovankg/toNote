@@ -14,7 +14,6 @@ define(function () {
 		if(inUse==true){
 			return;
 		}
-		console.log(event.target);
 		if(event.target.className=="addNote new" || event.target.className=="addNote"){
 			currentNote = event.target;
 			title = currentNote.childNodes[0].textContent;
@@ -26,7 +25,7 @@ define(function () {
 			titleInput.className="titleInput";
 			editBox.appendChild(contentInput);
 			titleInput.placeholder="note title";
-			contentInput.placeholder="note content"
+			contentInput.placeholder="note content";
 			if(title=="click me to edit title"){
 				titleInput.value="";			
 			}else{
@@ -48,6 +47,7 @@ define(function () {
 //				event.target.className="addNote";
 	function saveNote(event){
 		//tests for injection
+													///console.log(currentNote.IdName)
 		var testTitle = titleInput.value;
 		console.log(testTitle.value);
 
@@ -68,6 +68,7 @@ define(function () {
 			currentNote.childNodes[4].textContent = "last editDate: "+ newEditDate.toString();
 			event.target.remove();
 			currentNote.className="addNote";
+
 			inUse = false;
 		}
 	}

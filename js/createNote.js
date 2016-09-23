@@ -7,6 +7,8 @@ define(function () {
     function  Note (title,description){
     	var getDate = new Date();
 		var newDiv = document.createElement('div');
+		var test = localStorage.length+1;
+		newDiv.IdName = test;
 		var newX = document.createElement('button');
 		var newTxt = document.createElement('p');
 		var newTitle = document.createElement('p');
@@ -41,11 +43,9 @@ define(function () {
 		};
 
 
-		var newId= "ID"+localStorage.length;
-//		console.log(JSON.stringify(noteToString));
+		var newId= localStorage.length;
 		localStorage.setItem(newId,JSON.stringify(noteToString));
 
-	//	console.log(title, content, date, editDate + " collected");
 	}
 	return addNewNote;
 });
