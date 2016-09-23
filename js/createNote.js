@@ -28,7 +28,24 @@ define(function () {
 		newDate.innerHTML= "created on: "+getDate.toString();
 		newDiv.appendChild(editDate);
 		editDate.className = "editDate";
-		editDate.innerHTML = ""
+		editDate.innerHTML = "";
+		stringIt(newTitle,newTxt,newDate,editDate);
+	}
+	function stringIt(title, content,date,editDate){
+	
+		noteToString ={
+			'title': title.textContent,
+			'content': content.textContent,
+			'date': date.textContent, 
+			'editDate': editDate.textContent
+		};
+
+
+		var newId= "ID"+localStorage.length;
+//		console.log(JSON.stringify(noteToString));
+		localStorage.setItem(newId,JSON.stringify(noteToString));
+
+	//	console.log(title, content, date, editDate + " collected");
 	}
 	return addNewNote;
 });

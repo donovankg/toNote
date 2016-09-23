@@ -17,8 +17,8 @@ define(function () {
 		console.log(event.target);
 		if(event.target.className=="addNote new" || event.target.className=="addNote"){
 			currentNote = event.target;
-			title = currentNote.childNodes[0].innerHTML;
-			content = currentNote.childNodes[2].innerHTML;
+			title = currentNote.childNodes[0].textContent;
+			content = currentNote.childNodes[2].textContent;
 			currentNote.className="addNote selected";
 			article.appendChild(editBox);
 			editBox.className="edit";
@@ -56,9 +56,16 @@ define(function () {
 			var newEditDate = new Date();
 			// newTitle.innerHTML = title;
 			// newTxt.innerHTML= content;
-			currentNote.childNodes[0].innerHTML = titleInput.value;
-			currentNote.childNodes[2].innerHTML = contentInput.value;
-			currentNote.childNodes[4].innerHTML = "last editDate: "+ newEditDate.toString();
+			
+			if (titleInput.value === ""){
+				currentNote.childNodes[0].textContent = "click me to edit title";
+			}else{
+				currentNote.childNodes[0].textContent = titleInput.value;
+			}
+
+			
+			currentNote.childNodes[2].textContent = contentInput.value;
+			currentNote.childNodes[4].textContent = "last editDate: "+ newEditDate.toString();
 			event.target.remove();
 			currentNote.className="addNote";
 			inUse = false;
