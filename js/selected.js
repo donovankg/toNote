@@ -15,6 +15,7 @@ define(function () {
 			return;
 		}
 		if(event.target.className=="addNote new" || event.target.className=="addNote"){
+			console.log(event.target.IdName);
 			currentNote = event.target;
 			title = currentNote.childNodes[0].textContent;
 			content = currentNote.childNodes[2].textContent;
@@ -52,8 +53,8 @@ define(function () {
 		console.log(testTitle.value);
 
 		if(event.target.className=="edit"){
-			console.log(title);
-			var newEditDate = new Date();
+			var newEditDate = new Date()
+			var nEditDate= "last editDate: "+ newEditDate.toString();
 			// newTitle.innerHTML = title;
 			// newTxt.innerHTML= content;
 			
@@ -62,10 +63,25 @@ define(function () {
 			}else{
 				currentNote.childNodes[0].textContent = titleInput.value;
 			}
-
-			
+		noteToString ={
+			'title': titleInput.value,
+			'content': contentInput.value,
+			'date': 'date.textContent', 
+			'editDate': editDate.textContent
+		};
+		console.log(noteToString);
+		for(var key in localStorage){
+			if(key ==currentNote.IdName){
+				//console.log(key + ' key returned');
+				localStorage.setItem(0,JSON.stringify(noteToString));
+			}
+	//	var tests = localStorage.getItem(key,JSON.stringify(noteToString));
+	//		console.log(tests)
+		}
+			//stringIt(titleInput.value, contentInput.value,nEditDate);
+			//title, content,date,editDate
 			currentNote.childNodes[2].textContent = contentInput.value;
-			currentNote.childNodes[4].textContent = "last editDate: "+ newEditDate.toString();
+			currentNote.childNodes[4].textContent = nEditDate;
 			event.target.remove();
 			currentNote.className="addNote";
 

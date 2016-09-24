@@ -3,18 +3,18 @@ requirejs(['js/createNote','js/selected'],function(fromCreateNote, fromSlected){
 	var addBtn = document.getElementById('addBtn');
 	addBtn.addEventListener('click', fromCreateNote, false);
 //remove note
-var removeNote = function (event){
-	var newDiv = document.createElement('div');
-	if(event.target.className=="xBtn"){
-		event.target.parentNode.remove();
-		for(var key in localStorage){
+	var removeNote = function (event){
+		var newDiv = document.createElement('div');
+		if(event.target.className=="xBtn"){
+			event.target.parentNode.remove();
+			for(var key in localStorage){
 
-			if(key == event.target.parentNode.IdName){
-				console.log(key + " delete this "+event.target.parentNode.IdName);
-				localStorage.removeItem(key);
-			//	localStorage.remove(key);
-}
-		}
+				if(key == event.target.parentNode.IdName){
+					console.log(key + " delete this "+event.target.parentNode.IdName);
+					localStorage.removeItem(key);
+				//	localStorage.remove(key);
+	}
+			}
 	}
 };	
 article.addEventListener('click',removeNote, false);
@@ -24,7 +24,7 @@ if(localStorage.length > 0){
 	(function(){
 		for(var key in localStorage){
 			var node = JSON.parse(localStorage[key]);	
-			var article = document.getElementsByTagName('article')[0];   
+			var article = document.getElementsByTagName('article')[0];  //adds to the local after putting this in a mudule. 
 			var getDate;
 			var newDiv = document.createElement('div');
 			var newX = document.createElement('button');
