@@ -63,23 +63,24 @@ define(function () {
 			}else{
 				currentNote.childNodes[0].textContent = titleInput.value;
 			}
+
+
 		noteToString ={
 			'title': titleInput.value,
 			'content': contentInput.value,
-			'date': 'date.textContent', 
+			'date': '', 
 			'editDate': editDate.textContent
 		};
-		console.log(noteToString);
+		console.log(noteToString.date);
 		for(var key in localStorage){
 			if(key ==currentNote.IdName){
+			var node = JSON.parse(localStorage[key]);
 				//console.log(key + ' key returned');
-				localStorage.setItem(0,JSON.stringify(noteToString));
+				localStorage.setItem(key,JSON.stringify(noteToString));
 			}
-	//	var tests = localStorage.getItem(key,JSON.stringify(noteToString));
-	//		console.log(tests)
+			
 		}
-			//stringIt(titleInput.value, contentInput.value,nEditDate);
-			//title, content,date,editDate
+
 			currentNote.childNodes[2].textContent = contentInput.value;
 			currentNote.childNodes[4].textContent = nEditDate;
 			event.target.remove();

@@ -27,7 +27,7 @@ define(function () {
 		newX.innerHTML = "X";
 		newTitle.innerHTML = "click me to edit title";
 		newTxt.innerHTML= "click me to edit title";
-		newDate.innerHTML= "created on: "+getDate.toString();
+		newDate.textContent= "created on: "+getDate.toString();
 		newDiv.appendChild(editDate);
 		editDate.className = "editDate";
 		editDate.innerHTML = "";
