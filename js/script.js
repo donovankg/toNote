@@ -10,7 +10,7 @@ requirejs(['js/createNote','js/selected'],function(fromCreateNote, fromSlected){
 			for(var key in localStorage){
 
 				if(key == event.target.parentNode.IdName){
-					console.log(key + " delete this "+event.target.parentNode.IdName);
+				//	console.log(key + " delete this "+event.target.parentNode.IdName);
 					localStorage.removeItem(key);
 				//	localStorage.remove(key);
 	}

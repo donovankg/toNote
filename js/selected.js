@@ -15,7 +15,7 @@ define(function () {
 			return;
 		}
 		if(event.target.className=="addNote new" || event.target.className=="addNote"){
-			console.log(event.target.IdName);
+			//console.log(event.target.IdName);
 			currentNote = event.target;
 			title = currentNote.childNodes[0].textContent;
 			content = currentNote.childNodes[2].textContent;
@@ -50,7 +50,7 @@ define(function () {
 		//tests for injection
 													///console.log(currentNote.IdName)
 		var testTitle = titleInput.value;
-		console.log(testTitle.value);
+	//	console.log(testTitle.value);
 
 		if(event.target.className=="edit"){
 			var newEditDate = new Date()
@@ -70,12 +70,11 @@ define(function () {
 			'date': currentNote.childNodes[3].textContent, 
 			'editDate': nEditDate
 		};
-		console.log(noteToString);
-		console.log(noteToString.date);
+
 		for(var key in localStorage){
-			if(key ==currentNote.IdName){
+			if(key ==currentNote.IdName-1){
 			var node = JSON.parse(localStorage[key]);
-				//console.log(key + ' key returned');
+			//	console.log('setting item to local storage');
 				localStorage.setItem(key,JSON.stringify(noteToString));
 			}
 
