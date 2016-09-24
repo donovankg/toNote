@@ -64,13 +64,13 @@ define(function () {
 				currentNote.childNodes[0].textContent = titleInput.value;
 			}
 
-
 		noteToString ={
 			'title': titleInput.value,
 			'content': contentInput.value,
-			'date': '', 
-			'editDate': editDate.textContent
+			'date': currentNote.childNodes[3].textContent, 
+			'editDate': nEditDate
 		};
+		console.log(noteToString);
 		console.log(noteToString.date);
 		for(var key in localStorage){
 			if(key ==currentNote.IdName){
@@ -78,7 +78,7 @@ define(function () {
 				//console.log(key + ' key returned');
 				localStorage.setItem(key,JSON.stringify(noteToString));
 			}
-			
+
 		}
 
 			currentNote.childNodes[2].textContent = contentInput.value;
