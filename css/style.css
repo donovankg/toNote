@@ -1,43 +1,54 @@
 body{
 	border: 0;
 	margin: 0;
+	font-family: 'Pinyon Script', cursive;
+	background-image: url("../images/sand.jpg");
 }
 textarea.contentInput{
 	border-radius: 3px;
 	border: 1px black solid;
 	margin: 5px;
 	resize: none;
-	overflow-wrap: ;
 	float: left;
 	width: 500px;
 	height: 250px;
-	opacity: .5;
+	background: #FFE9D2;	
 }
 .titleInput{
 	border-radius: 3px;
 	margin: 5px;
 	border: 1px black solid;
 	width: 200px;
+	background: #FFE9D2;
 }
 
 header{
+	font-size: 40px;
 	position: absolute;
-	top: 0;
-	background-color: red;
 	height: 10%;
 	width: 100%;
+	text-align: center;
+}
+header p{
+position: absolute;
+left: 34%;
+top: -40px;
 }
 article{
 	position: absolute;
 	top:10%;
 	overflow: auto;
-	background-color: yellow;
 	height: 90%;
 	width: 100%;
+
 }
 
 #addBtn{
+position: relative;
+	margin: 15px;
 	box-shadow: 2px 2px 2px black;
+	float: left;
+
 }
 
 .noteTitle{
@@ -66,8 +77,8 @@ article{
 	text-align: left;
 	pointer-events: none;
 	width: 90%;
-	height: 70%;
-	background: yellow;
+	height: 69%;
+	background: #FFD6AC;
 	border-radius: 5px;
 	border: black solid 1px;
 	padding: 5px;
@@ -91,16 +102,16 @@ button:hover{
 	width: 450px;
 	height: 300px;
 	border: 1px black solid;
-	background-color: green;
+	background-color: #B1702D;
 	overflow: auto;
 	animation: fadeIn 2s;
-	opacity: .8;
+	opacity: .7;
 	box-shadow: 12px 12px 10px black;
 }
 @keyframes fadeIn{
 	0%{opacity: 0;}
 	1%{box-shadow: 0px 0px 0px black;	}
-	50%{opacity: .8;}
+	50%{opacity: .7;}
 	100% {box-shadow: 12px 12px 10px black;	}
 }
 .selected{
@@ -123,9 +134,11 @@ button:hover{
 	left: 30%;
 	width: 600px;
 	height: 300px;
-	background: lightgreen;
+	background: #D49352;
 	border-radius: 5px;
 	border: black 1px solid;
+
+	
 }
 .createDate{
 	margin: 0px 5px 0px 5px;

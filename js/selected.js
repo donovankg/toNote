@@ -54,7 +54,7 @@ define(function () {
 
 		if(event.target.className=="edit"){
 			var newEditDate = new Date()
-			var nEditDate= "last editDate: "+ newEditDate.toString();
+			var nEditDate= "last edit date: "+ newEditDate.toString();
 			// newTitle.innerHTML = title;
 			// newTxt.innerHTML= content;
 			
