@@ -15,7 +15,6 @@ define(function () {
 			return;
 		}
 		if(event.target.className=="addNote new" || event.target.className=="addNote"){
-			//console.log(event.target.IdName);
 			currentNote = event.target;
 			title = currentNote.childNodes[0].textContent;
 			content = currentNote.childNodes[2].textContent;
@@ -43,21 +42,11 @@ define(function () {
 			inUse = true;
 		}
 	}
-//		}else if(event.target.className=="addNote selected"){
-			//if(!event.target.className=="noteTitle"||!event.target.className=="noteContent"){
-//				event.target.className="addNote";
 	function saveNote(event){
-		//tests for injection
-													///console.log(currentNote.IdName)
 		var testTitle = titleInput.value;
-	//	console.log(testTitle.value);
-
 		if(event.target.className=="edit"){
 			var newEditDate = new Date()
-			var nEditDate= "last edit date: "+ newEditDate.toString();
-			// newTitle.innerHTML = title;
-			// newTxt.innerHTML= content;
-			
+			var nEditDate= "last edit date: "+ newEditDate.toString();			
 			if (titleInput.value === ""){
 				currentNote.childNodes[0].textContent = "click me to edit title";
 			}else{
@@ -74,17 +63,13 @@ define(function () {
 		for(var key in localStorage){
 			if(key ==currentNote.IdName-1){
 			var node = JSON.parse(localStorage[key]);
-			//	console.log('setting item to local storage');
 				localStorage.setItem(key,JSON.stringify(noteToString));
 			}
-
 		}
-
 			currentNote.childNodes[2].textContent = contentInput.value;
 			currentNote.childNodes[4].textContent = nEditDate;
 			event.target.remove();
 			currentNote.className="addNote";
-
 			inUse = false;
 		}
 	}

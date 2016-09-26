@@ -34,18 +34,14 @@ define(function () {
 		stringIt(newTitle,newTxt,newDate,editDate);
 	}
 	function stringIt(title, content,date,editDate){
-	
 		noteToString ={
 			'title': title.textContent,
 			'content': content.textContent,
 			'date': date.textContent, 
 			'editDate': editDate.textContent
 		};
-
-
 		var newId= localStorage.length;
 		localStorage.setItem(newId,JSON.stringify(noteToString));
-
 	}
 	return addNewNote;
 });

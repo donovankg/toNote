@@ -2,24 +2,19 @@ requirejs(['js/createNote','js/selected'],function(fromCreateNote, fromSlected){
 	var article = document.getElementsByTagName('article')[0];   
 	var addBtn = document.getElementById('addBtn');
 	addBtn.addEventListener('click', fromCreateNote, false);
-//remove note
 	var removeNote = function (event){
 		var newDiv = document.createElement('div');
 		if(event.target.className=="xBtn"){
 			event.target.parentNode.remove();
 			for(var key in localStorage){
-
 				if(key == event.target.parentNode.IdName){
-				//	console.log(key + " delete this "+event.target.parentNode.IdName);
 					localStorage.removeItem(key);
-				//	localStorage.remove(key);
-	}
+				}
 			}
-	}
-};	
-article.addEventListener('click',removeNote, false);
+		}
+	};
+	article.addEventListener('click',removeNote, false);
 })
-
 if(localStorage.length > 0){
 	(function(){
 		for(var key in localStorage){
