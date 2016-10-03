@@ -1,10 +1,14 @@
 body{
 	border: 0;
 	margin: 0;
-	font-family: 'Pinyon Script', cursive;
 	background-image: url("../images/sand.jpg");
 	text-shadow: 2px 2px 2px #8E5C29;
 	color: #221100;
+
+}
+.saveChanges{
+	top: 80%;
+	right: 70%;
 }
 textarea.contentInput{
 	border-radius: 3px;
@@ -27,7 +31,7 @@ textarea.contentInput{
 }
 
 header{
-	
+font-family: 'Pinyon Script', cursive;
 	position: absolute;
 	height: 10%;
 	width: 100%;
@@ -139,20 +143,21 @@ button:hover{
 	box-shadow: 7px 7px 10px black;
 }
 .createDate{
-	margin:0;
+	margin:0 0 0 5px	;
 	top:65%;
 	float: left;
-	font-size: 12px;
+	font-size: 14px;
 }
 .editDate{
 	margin: 3px 0 0 5px;
 	top: 61%;
 	float: left;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 @media only screen and (max-width: 768px){
-	
+
+
 	header p{
 		font-size: 40px;
 		position: absolute;
@@ -174,7 +179,6 @@ button:hover{
 	textarea.contentInput{
 		width: 80%;
 	}
-	
 
 
 }
@@ -185,7 +189,6 @@ button:hover{
 		top: 12px;
 		right: 10%;
 	}
-	
 	article{
 		margin: 0;
 		padding: 0;
@@ -204,5 +207,6 @@ button:hover{
 	.noteContent{
 		height: 63%;
 	}
+
 
 }
