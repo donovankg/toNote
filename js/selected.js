@@ -4,6 +4,7 @@ define(function() {
     var titleInput = document.createElement('input');
     var contentInput = document.createElement('textarea');
     var editDate = document.createElement('p');
+		var saveChanges = document.createElement('button');
     article.addEventListener('click', selectThis, false);
     article.addEventListener('click', saveNote, false);
     var currentNote;
@@ -26,6 +27,9 @@ define(function() {
             editBox.appendChild(titleInput);
             titleInput.className = "titleInput";
             editBox.appendChild(contentInput);
+						editBox.appendChild(saveChanges);
+						saveChanges.className = "saveChanges";
+						saveChanges.textContent = "save changes";
             titleInput.placeholder = "note title";
             contentInput.placeholder = "note content";
             if (title == "click me to edit title") {
@@ -48,7 +52,7 @@ define(function() {
 
     function saveNote(event) {
         var testTitle = titleInput.value;
-        if (event.target.className == "edit") {
+        if (event.target.className == "saveChanges") {
             var newEditDate = new Date();
             var nEditDate = "last edit date: " + newEditDate.toString();
 
@@ -76,7 +80,7 @@ define(function() {
 
             currentNote.childNodes[2].textContent = contentInput.value;
             currentNote.childNodes[4].textContent = nEditDate;
-            event.target.remove();
+            event.target.parentNode.remove();
             currentNote.className = "addNote";
 
             inUse = false;

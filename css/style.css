@@ -4,7 +4,10 @@ body{
 	background-image: url("../images/sand.jpg");
 	text-shadow: 2px 2px 2px #8E5C29;
 	color: #221100;
-
+}
+.saveChanges{
+	top: 80%;
+	right: 70%;
 }
 textarea.contentInput{
 	border-radius: 3px;
