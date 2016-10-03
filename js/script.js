@@ -1,9 +1,9 @@
-requirejs(['js/createNote','js/selected','js/add'],function(fromCreateNote, fromSlected,fromAdd){
+requirejs(['js/createNote','js/selected'],function(fromCreateNote, fromSlected){
 	//localStorage.setItem(0,0);
 	var article = document.getElementsByTagName('article')[0];
 	var addBtn = document.getElementById('addBtn');
 	addBtn.addEventListener('click', fromCreateNote, false);
-	article.addEventListener('load', fromAdd,true);
+//	article.addEventListener('load', fromAdd,true);
 //remove note
 
 	var removeNote = function (event){
