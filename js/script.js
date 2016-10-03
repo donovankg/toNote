@@ -1,7 +1,9 @@
 requirejs(['js/createNote','js/selected'],function(fromCreateNote, fromSlected){
-	var article = document.getElementsByTagName('article')[0];   
+	//localStorage.setItem(0,0);
+	var article = document.getElementsByTagName('article')[0];
 	var addBtn = document.getElementById('addBtn');
 	addBtn.addEventListener('click', fromCreateNote, false);
+
 //remove note
 	var removeNote = function (event){
 		var newDiv = document.createElement('div');
@@ -16,15 +18,15 @@ requirejs(['js/createNote','js/selected'],function(fromCreateNote, fromSlected){
 	}
 			}
 	}
-};	
+};
 article.addEventListener('click',removeNote, false);
 })
 
 if(localStorage.length > 0){
 	(function(){
 		for(var key in localStorage){
-			var node = JSON.parse(localStorage[key]);	
-			var article = document.getElementsByTagName('article')[0];  //adds to the local after putting this in a mudule. 
+			var node = JSON.parse(localStorage[key]);
+			var article = document.getElementsByTagName('article')[0];  //adds to the local after putting this in a mudule.
 			var getDate;
 			var newDiv = document.createElement('div');
 			var newX = document.createElement('button');
@@ -51,5 +53,7 @@ if(localStorage.length > 0){
 			editDate.className = "editDate";
 			editDate.textContent = node.editDate;
 		}
+
+
 	})();
 }
