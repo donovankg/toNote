@@ -14,8 +14,7 @@ define(function() {
         var newTitle = document.createElement('p');
         var newDate = document.createElement('p');
         var editDate = document.createElement('p');
-        var test = localStorage.length + 1;
-        newDiv.IdName = test;
+        newDiv.IdName = newId;
         article.appendChild(newDiv);
         newDiv.appendChild(newTitle);
         newDiv.appendChild(newX);
@@ -35,6 +34,14 @@ define(function() {
         editDate.innerHTML = "";
         stringIt(newTitle, newTxt, newDate, editDate);
     }
+    var newId = 1;
+    if (!(localStorage.length == 0)) {
+        for (var key in localStorage) {
+            if (!isNaN(key)&&newId <= Number(key)) {
+                newId = Number(key) + 1;
+            }
+        }
+    }
     function stringIt(title, content, date, editDate) {
         noteToString = {
             'title': title.textContent,
@@ -42,18 +49,9 @@ define(function() {
             'date': date.textContent,
             'editDate': editDate.textContent
         };
-        var newId = 1;
-        var largest;
-        if (localStorage.length == 0) {
-        } else {
-            for (var key in localStorage) {
-                largest = Number(key);
-                if (!isNaN(key)) {
-                    newId = largest + 1;
-                }
-            }
-        }
+        console.log(newId);
         localStorage.setItem(newId, JSON.stringify(noteToString));
+        newId++;
     }
     return addNewNote;
 });

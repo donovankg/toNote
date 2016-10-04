@@ -56,14 +56,11 @@ define(function() {
         if (event.target.className == "saveChanges") {
             var newEditDate = new Date();
             var nEditDate = "last edit date: " + newEditDate.toString();
-
-
             if (titleInput.value === "") {
                 currentNote.childNodes[0].textContent = "click me to edit title";
             } else {
                 currentNote.childNodes[0].textContent = titleInput.value;
             }
-
             noteToString = {
                 'title': titleInput.value,
                 'content': contentInput.value,
@@ -72,18 +69,17 @@ define(function() {
             };
 
             for (var key in localStorage) {
-                if (key = currentNote.IdName) {
-                    var node = JSON.parse(localStorage[key]);
+                if (key == currentNote.IdName) {
+                    //var node = JSON.parse(localStorage[key]);
                   //  console.log('setting item to local storage');
+                  console.log(currentNote.IdName);
                     localStorage.setItem(key, JSON.stringify(noteToString));
                 }
             }
-
             currentNote.childNodes[2].textContent = contentInput.value;
             currentNote.childNodes[4].textContent = nEditDate;
             event.target.parentNode.remove();
             currentNote.className = "addNote";
-
             inUse = false;
         }
     }
