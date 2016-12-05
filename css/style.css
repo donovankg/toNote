@@ -1,10 +1,12 @@
 body{
 	border: 0;
 	margin: 0;
-	background-image: url("../images/sand.jpg");
-	text-shadow: 2px 2px 2px #8E5C29;
 	color: #221100;
 
+}
+
+.button{
+	flex: 1;
 }
 .saveChanges{
 	top: 80%;
@@ -18,30 +20,32 @@ textarea.contentInput{
 	float: left;
 	width: 500px;
 	height: 250px;
-	background: #FFE9D2;
-	box-shadow: 2px 2px 2px black;
+	background: #FCE9DE;
 }
 .titleInput{
 	border-radius: 3px;
 	margin: 5px;
 	border: 1px black solid;
 	width: 200px;
-	background: #FFE9D2;
-	box-shadow: 2px 2px 2px black;
+	background: #black;
 }
 
 header{
-font-family: 'Pinyon Script', cursive;
+
+	background: #B5907A;
+	
+    font-family: 'Open Sans', sans-serif;
 	position: absolute;
 	height: 10%;
 	width: 100%;
 	text-align: center;
 }
 header p{
+	flex: 1;
 	font-size: 60px;
-position: absolute;
-left: 25%;
-top: -60px;
+	position: absolute;
+	left: 25%;
+	top: -60px;
 }
 article{
 	position: absolute;
@@ -53,10 +57,12 @@ article{
 #addBtn{
 position: relative;
 	margin: 15px;
-	box-shadow: 2px 2px 2px black;
 	float: left;
-	opacity: .6;
 }
+.center{
+	text-align: center;
+}
+
 .noteTitle{
 	float: left;
 	margin: 3px;
@@ -67,13 +73,11 @@ position: relative;
 	float: right;
 	margin: 3px;
 	padding: 0;
-	box-shadow: 2px 2px 2px black;
 }
 .xBtn{
 	float: right;
 	margin: 3px;
 	padding: 0;
-	box-shadow: 2px 2px 2px black;
 }
 .noteContent{
 	margin: 3px 2% 3px 2%;
@@ -82,11 +86,10 @@ position: relative;
 	pointer-events: none;
 	width: 90%;
 	height: 69%;
-	background: #FFD6AC;
+	background: #FCE9DE;
 	border-radius: 5px;
 	border: black solid 1px;
 	padding: 5px;
-	box-shadow: 2px 2px 2px black;
 }
 .written{
 	margin: 7px;
@@ -105,30 +108,19 @@ button:hover{
 	width: 42%;
 	height: 300px;
 	border: 1px black solid;
-	background-color: #B1702D;
+	background-color: #A77A60;
 	overflow: auto;
-	animation: fadeIn 2s;
-	opacity: .8;
-	box-shadow: 12px 12px 10px black;
+
 }
-@keyframes fadeIn{
-	0%{opacity: 0;}
-	1%{box-shadow: 0px 0px 0px black;	}
-	50%{opacity: .8;}
-	100% {box-shadow: 12px 12px 10px black;	}
-}
+
 .selected{
 	transform: scale(1.1);
-	box-shadow: 14px 14px 12px black;
 	animation: selectedExpand 2s;
 }
 @keyframes selectedExpand{
 	0%{transform: scale(1);}
-	0.5%{opacity: .6;}
-	1%{box-shadow: 12px 12px 10px black;}
 	99%{transform: scale(1.1);}
-	99.5%{opacity: 1;}
-	100% {box-shadow: 14px 14px 12px black;}
+
 }
 .edit{
 	padding: 5px;
@@ -137,10 +129,9 @@ button:hover{
 	left: 30%;
 	width: 600px;
 	height: 340px;
-	background: #D49352;
+	background: #A77A60;
 	border-radius: 5px;
 	border: black 1px solid;
-	box-shadow: 7px 7px 10px black;
 }
 .createDate{
 	margin:0 0 0 5px	;

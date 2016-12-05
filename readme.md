@@ -1,6 +1,8 @@
 ##TODO Project
 
 
+add para of what this does and what it uses. patterns.
+
 Create a TODO/NOTES aplication that allow the user to:
 
 1. Create new Notes
